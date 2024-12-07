@@ -1,7 +1,6 @@
 __all__ = (
-    "UserRead",
-    "UserCreate",
-    "UserUpdate",
+    "RoomRead",
+    "RoomCreate",
 )
 
-from .user import UserRead, UserCreate, UserUpdate
+from .room import RoomRead, RoomCreate

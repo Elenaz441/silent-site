@@ -1,7 +1,7 @@
 __all__ = (
     "Base",
-    "User",
+    "Room",
 )
 
 from .base import Base
-from .user import User
+from .room import Room

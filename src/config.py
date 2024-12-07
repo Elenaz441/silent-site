@@ -11,15 +11,9 @@ class RunConfig(BaseModel):
     port: int = 8000
 
 
-class AuthApiPrefix(BaseModel):
-    prefix: str = "/auth"
-    register: str = "/register"
-
-
 class ApiV1Prefix(BaseModel):
     prefix: str = "/v1"
-    users: str = "/users"
-    auth: AuthApiPrefix = AuthApiPrefix()
+    rooms: str = "/rooms"
 
 
 class ApiPrefix(BaseModel):
@@ -45,12 +39,6 @@ class RedisConfig(BaseModel):
     password: str
 
 
-class AuthConfig(BaseModel):
-    secret_key: str
-    token_url: str = "/api/v1/auth/login"
-    lifetime_seconds_access: int = 3600
-
-
 class FrontendConfig(BaseModel):
     url: str
 
@@ -65,7 +53,6 @@ class Settings(BaseSettings):
     api: ApiPrefix = ApiPrefix()
     db: DatabaseConfig
     redis: RedisConfig
-    auth: AuthConfig
     front: FrontendConfig
 
 

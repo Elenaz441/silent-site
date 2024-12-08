@@ -21,8 +21,8 @@ async def get_rooms(db: AsyncSession = Depends(get_async_session)):
 
 
 @router.post("/create", status_code=status.HTTP_201_CREATED)
-async def create_arrival(room: RoomCreate,
-                         db: AsyncSession = Depends(get_async_session)):
+async def create_room(room: RoomCreate,
+                      db: AsyncSession = Depends(get_async_session)):
     data = room.model_dump()
     new_room = Room(**data)
 

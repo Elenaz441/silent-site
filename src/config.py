@@ -14,6 +14,8 @@ class RunConfig(BaseModel):
 class ApiV1Prefix(BaseModel):
     prefix: str = "/v1"
     rooms: str = "/rooms"
+    users: str = "/users"
+    websocket: str = "/ws"
 
 
 class ApiPrefix(BaseModel):
